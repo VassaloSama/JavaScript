@@ -14,11 +14,19 @@ section {
     border-radius: 10px;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.301);
     background-color: white;
-    width: 700px;
+    width: 500px;
     padding: 15px;
     margin: auto;
 }
 
+div#msg, #foto{
+    text-align: center;
+    padding: 8px;
+}
+
+div {
+    padding: 8px;
+}
 
 footer {
     color: white;
