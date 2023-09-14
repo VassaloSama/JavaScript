@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Super Contador</title>
+</head>
+<body>
+    <header>
+        <h1>Vamos contar</h1>
+    </header>
+    <section>
+        <p>
+            Início:
+            <input type="number" name="inicio" id="inicio">
+        </p>
+        <p>
+            Fim:
+            <input type="number" name="fim" id="fim">
+        </p>
+        <p>
+            passo:
+            <input type="number" name="passo" id="passo">
+        </p>
+        <p>
+            <input type="submit" value="Contar" onclick="contar()">
+        </p>
+        <div id="res">
+            Preparando a contagem ...
+        </div>
+    </section>
+    <footer>
+        <p>@ CursoemVideo</p>
+    </footer>
+    <script>
+        
+
+    function contar() {
+        var i = window.document.getElementById('inicio')
+        var f = window.document.getElementById('fim')
+        var p = window.document.getElementById('passo')
+        var r = window.document.getElementById('res')
+
+        if (i.value.length == 0 || f.value.length == 0 || p.value.length == 0){
+            r.innerHTML = 'Impossivel contar!'
+        } else {
+            r.innerHTML = 'Contando: <br>'
+            var i = Number(i.value)
+            var f = Number(f.value)
+            var p = Number(p.value)
+
+            if (p >= 0) {
+                window.alert('Passo invalido! Considerando passo 1')
+                p = 1
+            }
+
+            if (i < f) {
+                //contagem crescente
+                for (var c = i;c <= f;c += p) {
+                r.innerHTML += `${c} \u{1F449}`
+                }
+            } else {
+                //contagem regressiva
+                for (var c = i;c >= f;c -=p) {
+                    r.innerHTML += `${c} \u{1F449}`
+                }
+            }
+            r.innerHTML += `\u{1F3C1}`
+        }      
+    }
+    </script>
+</body>
+</html>
