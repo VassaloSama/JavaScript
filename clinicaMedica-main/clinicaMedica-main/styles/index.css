@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans Pro',sans-serif;
+    box-sizing: border-box;
+}
+main{
+    color: #0000008c;
+    margin-bottom: 60px;
+}
+.container {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+.box-texto{
+    text-align: center;
+    margin: 0 auto;
+    max-width: 600px;
+}
+.box-texto h2, h3, p{
+    padding-bottom: 20px;
+}
+#sobre,
+#especialidades,
+#contato{
+    padding: 40px 20px 0;
+}
+.topo{
+    background-color: #00cad1;
+    margin-bottom: 20px;
+}
+.topo a{
+    text-decoration: none;
+    color: #ffffff;
+    padding: 10px;
+    font-weight: 600;
+}
+.topo a:hover{
+    color: #004b4c;
+}
+.topo .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 60px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+footer{
+    background-color: #0d6e71;
+    color: #fff;
+    padding: 20px;
+}
+footer .container{
+    text-align: center;
+}
+.box-apresentacao{
+    background-image: url('../imagens/Green\ Black\ Bold\ Pet\ Shop\ Information\ Landscape\ Banner.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    width: 100%;
+    display: flex;
+}
+
+.box-apresentacao h1{
+    font-weight: 500;
+    font-size: 2.35rem;
+    margin:0;
+}
+.box-texto span{
+    font-weight: bold;
+}
+.box-sobre{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box-sobre h3{
+    font-weight: 500;
+}
+.box-especialidades{
+    display: flex;
+    flex-wrap: wrap;
+}
+.box-especialidade{
+    border-radius: 3px;
+    box-shadow: 0px 1px 10px rgb(0 0 0 / 50%);
+    margin: 20px;
+    width: calc(100% / 3 - 40px);
+}
+.box-especialidade img{
+    width: 100%;
+}
+.box-especialidade figcaption{
+    text-align: center;
+    padding: 10px;
+}
+.box-especialidades-link a{
+    text-decoration: none;
+    color: #fff;
+    background-color: #00cad1;
+    font-weight: 600;
+    padding: 10px 20px;
+}
+
+.box-especialidades-link a:hover{
+    color: #004b4c
+}
+
+@media(max-width:425px){
+    body{
+        font-size: 1rem;
+        text-align: center;
+    }
+    .box-especialidade{
+        width: calc(100%);
+        align-items: center;
+    }
+}
+@media (max-width: 768px){
+    .box-especialidade figcaption{
+        font-size: 1.5rem;
+    }
+    .box-especialidade{
+        width: calc(100% - 20px);
+        margin: 10px;
+        align-items: center;
+    }
+    
+}
