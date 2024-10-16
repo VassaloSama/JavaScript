@@ -1,0 +1,39 @@
+<!-- 3) Crie um programa que leia o nome e o salário de um funcionário, mostrando no
+final uma mensagem.
+Ex:
+Nome do Funcionário: Maria do Carmo
+Salário: 1850,45
+O funcionário Maria do Carmo tem um salário de R$1850,45 em Junho. -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Nome do Funcionario: <input type="text" id="nome">
+    Salário: <input type="number" id="salario">
+    <button onclick="mostrar()">mostrar</button>
+</body>
+<script>
+    class Funcionario{
+        constructor(nome, salario){
+            this.nome = nome;
+            this.salario = salario;
+        }  
+
+        mostrar_informações(){
+            window.alert(`o Funcionario ${this.nome} tem um salário de R$ ${this.salario} em junho`);
+        }
+    }
+
+    function mostrar(){
+        let nome = document.getElementById('nome').value;
+        let salario = Number(document.getElementById('salario').value);
+        let funcionario = new Funcionario(nome, salario);
+        funcionario.mostrar_informações();
+    }
+</script>
+</html>
