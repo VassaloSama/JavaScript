@@ -15,10 +15,17 @@ O sucessor de 9 é 10 -->
 <body>
     <label for="number">Digite um número: </label>
     <input type="number" id="numero">
+    <button onclick="analisar()">Analisar</button>
+<div id="result">   
+</div>
 </body>
 <script>
-    let numero = Number(document.getElementById('numero').value);
-    let antecessor = numero - 1;
-    let sucessor = numero + 1;
+    function analisar(){
+        let numero = Number(document.getElementById('numero').value);
+        let resultado = document.getElementById('result');
+        let antecessor = numero - 1;
+        let sucessor = numero + 1;
+        resultado.innerHTML = `O antecessor é ${antecessor} <br> O sucessor é ${sucessor}`;
+    }
 </script>
 </html>
